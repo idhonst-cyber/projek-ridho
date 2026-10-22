@@ -1,0 +1,250 @@
+:root {
+  --merah: #c4161c;
+  --merah-tua: #8f0f14;
+  --hijau: #2f5d2a;
+  --teks: #222;
+  --abu: #f2f2f2;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+  color: var(--teks);
+  line-height: 1.7;
+  background: #fff;
+}
+
+a:focus-visible, button:focus-visible {
+  outline: 3px solid #ffbf00;
+  outline-offset: 2px;
+}
+
+/* ---------- bagian atas / menu ---------- */
+.atas { background: var(--merah); }
+
+.atas-isi {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.logo {
+  color: #fff;
+  font-size: 1.3rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 4px;
+}
+
+nav a {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  padding: 8px 14px;
+  border-radius: 4px;
+}
+
+nav a:hover,
+nav a.aktif { background: var(--merah-tua); }
+
+#menuBtn {
+  display: none;
+  background: var(--merah-tua);
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* ---------- judul halaman ---------- */
+.hero {
+  background: var(--abu);
+  border-bottom: 4px solid var(--hijau);
+}
+
+.hero-isi {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.hero h1 {
+  margin: 0 0 8px;
+  font-size: 2.6rem;
+  color: var(--merah-tua);
+}
+
+.hero p { margin: 0; font-size: 1.1rem; }
+
+.hero svg { width: 170px; flex-shrink: 0; }
+
+.judul-halaman {
+  background: var(--abu);
+  border-bottom: 4px solid var(--hijau);
+}
+
+.judul-halaman div {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 28px 20px;
+}
+
+.judul-halaman h1 { margin: 0; color: var(--merah-tua); font-size: 2rem; }
+.judul-halaman p { margin: 4px 0 0; }
+
+/* ---------- isi ---------- */
+main {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 10px 20px 30px;
+}
+
+h2 {
+  color: var(--merah-tua);
+  border-bottom: 2px solid var(--merah);
+  padding-bottom: 4px;
+  margin-top: 40px;
+}
+
+h3 { margin-bottom: 2px; color: var(--hijau); }
+h3 + p { margin-top: 2px; }
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 480px;
+  margin: 14px 0;
+}
+
+th, td {
+  border: 1px solid #bbb;
+  padding: 8px 12px;
+  text-align: left;
+}
+
+th { background: var(--merah); color: #fff; }
+tr:nth-child(even) td { background: var(--abu); }
+
+.catatan {
+  border-left: 5px solid var(--hijau);
+  background: #f1f7f0;
+  padding: 10px 16px;
+  margin: 20px 0;
+}
+
+.peringatan {
+  border-left: 5px solid var(--merah);
+  background: #fdf0f0;
+  padding: 10px 16px;
+  margin: 20px 0;
+}
+
+.lanjut {
+  display: inline-block;
+  margin-top: 30px;
+  background: var(--merah);
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+}
+
+.lanjut:hover { background: var(--merah-tua); }
+
+/* ---------- accordion ---------- */
+.acc-judul {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 8px;
+  padding: 12px 16px;
+  font-size: 1rem;
+  font-family: inherit;
+  text-align: left;
+  background: var(--abu);
+  border: 1px solid #bbb;
+  cursor: pointer;
+}
+
+.acc-judul:hover { background: #e6e6e6; }
+
+.acc-isi {
+  display: none;
+  padding: 4px 16px 12px;
+  border: 1px solid #bbb;
+  border-top: none;
+}
+
+.acc-isi.tampil { display: block; }
+
+/* ---------- tab ---------- */
+.tab-menu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-top: 16px;
+}
+
+.tab-btn {
+  padding: 10px 16px;
+  font-size: 1rem;
+  font-family: inherit;
+  background: var(--abu);
+  border: 1px solid #bbb;
+  cursor: pointer;
+}
+
+.tab-btn.aktif {
+  background: var(--merah);
+  border-color: var(--merah);
+  color: #fff;
+}
+
+.tab-isi {
+  display: none;
+  border: 1px solid #bbb;
+  padding: 6px 20px 16px;
+}
+
+.tab-isi.tampil { display: block; }
+
+/* ---------- footer ---------- */
+footer {
+  background: var(--hijau);
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  margin-top: 30px;
+}
+
+footer p { margin: 2px 0; }
+
+/* ---------- layar kecil ---------- */
+@media (max-width: 640px) {
+  #menuBtn { display: block; }
+  nav { display: none; width: 100%; }
+  nav.buka { display: block; }
+  nav ul { flex-direction: column; padding-bottom: 8px; }
+
+  .hero-isi { flex-direction: column-reverse; text-align: center; padding: 28px 20px; }
+  .hero h1 { font-size: 2.1rem; }
+  .hero svg { width: 130px; }
+}
